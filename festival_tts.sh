@@ -9,6 +9,13 @@ if [[ $spanish == "" ]];then
    exit 0;
 fi
 
+#--- Remove the noises in text --------------#
+# Noises are [LAUGHTER], [NOISE] and [VOCALIZED-NOISE] 
+
+spanish=`echo $text | awk '{sub(/\[.*\] /,"");print}'`;
+
+#--------------------------------------------#
+
 Festival=/home/jigar/tts/festival/bin
 
 echo $spanish | $Festival/festival --tts --language spanish;
