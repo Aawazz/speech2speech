@@ -1,2 +1,9 @@
 barista conf/actors.ini conf/graph.dot 
-conf/actors.ini: cannot open file
+ ++  m_file_list_reader: file list: pcm.list
+ ++  m_file_list_reader: Finished reading file list: pcm.list
+1 [VOCALIZED-NOISE] WHAT IS YOUR NAME 
+LOG (barista:WriteBestPath():gmm/gmm-decode-faster-online.cc:94) Log-like per frame for utterance 1 is -7.61706 over 268 frames.
+LOG (barista:operator()():gmm/gmm-decode-faster-online.cc:145) Time taken [excluding initialization] 2.32636s: real-time factor assuming 100 frames/sec is 0.868046
+LOG (barista:operator()():gmm/gmm-decode-faster-online.cc:148) Done 1 utterances, failed for 0
+LOG (barista:operator()():gmm/gmm-decode-faster-online.cc:150) Overall log-likelihood per frame is -7.61706 over 268 frames.
+ ++  Done
