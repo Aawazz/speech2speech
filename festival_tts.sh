@@ -1,13 +1,14 @@
 #!/bin/bash
 
-if [[ $1 == "" ]];then
-   echo "ERROR: Check USAGE";
-   echo "USAGE: festival_tts.sh <spanish_text>";
-   echo "Exiting the script";
+spanish=`cat spanish.txt`;
+echo "Spanish = ${spanish}";
+
+if [[ $spanish == "" ]];then
+   echo "ERROR: Check no text found in spanish.txt";
+   echo "Exiting the script festival_tts.sh";
    exit 0;
 fi
-echo $1;
 
 Festival=/home/jigar/tts/festival/bin
 
-echo $1 | $Festival/festival --tts --language spanish;
+echo $spanish | $Festival/festival --tts --language spanish;

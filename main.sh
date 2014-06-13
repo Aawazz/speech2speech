@@ -60,13 +60,14 @@ spanish=`echo $spanish | awk '{ $NF="" ; sub(/^[ ]/,"");print}'`;
 
 # Write spanish translation to file for converting it from UTF8 -> ISO
 echo $spanish > inSpanish.txt
-outSpanish=`iconv -fUTF8 inSpanish.txt -tiso-8859-2 -c`;
+iconv -fUTF8 inSpanish.txt -tiso-8859-2 -c -o spanish.txt;
 
-echo "Spanish  = $outSpanish";
 rm inSpanish.txt;
 
 #---------------------------------------------------------------#
 
 #------------ Text to Speech -----------------------------------#
 
-./festival_tts.sh $outSpanish
+./festival_tts.sh
+
+#------------- End of file -------------------------------------#
